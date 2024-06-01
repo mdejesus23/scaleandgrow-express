@@ -6,7 +6,7 @@ exports.getProducts = async (req, res) => {
     const products = result[0];
     console.log(products);
 
-    res.status(200).json({ message: "Success", data: products });
+    res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
